@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.browseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sqlConnectButton
@@ -78,11 +79,23 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(32, 20);
             this.maskedTextBox1.TabIndex = 7;
             // 
+            // browseButton
+            // 
+            this.browseButton.Location = new System.Drawing.Point(108, 175);
+            this.browseButton.Name = "browseButton";
+            this.browseButton.Size = new System.Drawing.Size(75, 23);
+            this.browseButton.TabIndex = 8;
+            this.browseButton.Text = "Browse...";
+            this.browseButton.UseVisualStyleBackColor = true;
+            this.browseButton.Visible = false;
+            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 255);
+            this.Controls.Add(this.browseButton);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -101,6 +114,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button browseButton;
     }
 }
 

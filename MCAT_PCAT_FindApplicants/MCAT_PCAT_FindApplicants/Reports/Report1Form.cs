@@ -21,7 +21,8 @@ namespace MCAT_PCAT_FindApplicants.Reports
         public Report1Form()
         {
             InitializeComponent();
-            reportDataSource.Value = mcatPcatDataTable;           
+            reportDataSource.Value = mcatPcatDataTable;
+            GetData(mcatPcatDataTable);
         }
 
         
