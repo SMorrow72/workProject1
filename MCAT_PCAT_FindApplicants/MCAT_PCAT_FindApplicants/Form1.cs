@@ -59,6 +59,7 @@ namespace MCAT_PCAT_FindApplicants
                     //Check if the SQL Connection is open
                     if(conn.State == System.Data.ConnectionState.Open)
                     {
+                        
                         //configure the sql query
                         //PASS IN AS CMD
                         System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(strSQL, conn);
@@ -86,6 +87,10 @@ namespace MCAT_PCAT_FindApplicants
 
                             if (cn.IsOpen)
                             {
+                                //delete any previously imported data
+                                string deleteSQL = "DELETE FROM LECOM_CURRENT_YEAR_CANDIDACY";
+                                cn.Execute(deleteSQL, SQLTypes.Text);
+
                                 //populate a separate table in Sarah db with this year's candidates  
                                 SqlParameters CParm = new SqlParameters();
                                 CParm.Add("exampleDT", candidacyStrings, SqlDbType.Structured);
@@ -153,6 +158,7 @@ namespace MCAT_PCAT_FindApplicants
                 if (openSheetDialog.ShowDialog() == DialogResult.OK && Path.GetExtension(openSheetDialog.FileName) == ".xlsx")
                 {
                     label1.Text = "Importing spreadsheet data...";
+                    browseButton.Visible = false;
 
                     //Declare the table that will hold the sheet's data
                     //this will be passed to SQL Server
@@ -194,7 +200,7 @@ namespace MCAT_PCAT_FindApplicants
                     dtParm.Add("exampleDT", mcatPcat, SqlDbType.Structured);
                     dtParm.List[0].TypeName = "dbo.LecomMcatPcatTableType";
                     cn.Execute("dbo.LecomImportMcatPcat", SQLTypes.StoredProcedure, dtParm);
-                    MessageBox.Show("Content Entered into Database!");
+                    label2.Text = "Conent Entered into Database!";
 
                     McatPcat.Fill(cn);
 

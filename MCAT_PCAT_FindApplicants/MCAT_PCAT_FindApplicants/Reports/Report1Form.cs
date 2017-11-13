@@ -16,28 +16,45 @@ namespace MCAT_PCAT_FindApplicants.Reports
         public ReportDataSource reportDataSource = new ReportDataSource();
         public LECOM.SqlConnection cn = new LECOM.SqlConnection("SIS", "Sarah");
 
-        Reports.DataSet1.McatPcatDataTable mcatPcatDataTable = new Reports.DataSet1.McatPcatDataTable();
-       
+        public DataSet1.McatPcatDataTable mcatPcatDataTable = new DataSet1.McatPcatDataTable();
+
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    this.reportViewer1.LocalReport.ReportPath = "";
+        //    this.Name = "Report1Form";
+        //    this.ResumeLayout(false);
+        //}
+
         public Report1Form()
         {
             InitializeComponent();
             reportDataSource.Value = mcatPcatDataTable;
-            GetData(mcatPcatDataTable);
+            GetData();
+            reportViewer1.LocalReport.ReportPath = @"..\..\Reports\Report1.rdlc";
+            
+        }
+       
+        private void Report1Form_Load(object sender, EventArgs e)
+        {
+            //define the dataset
+            //DataSet mcatPcatDataSet = new DataSet("DataSet1");
+            //mcatPcatDataSet.Tables.Add(mcatPcatDataTable);
+
+            
+            //reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            
+            reportViewer1.Visible = true;
+        }
+
+        public void GetData()
+        {
+            mcatPcatDataTable.Fill(cn);
+            reportDataSource.Name = "McatPcat";
+            reportViewer1.RefreshReport();
+            //MessageBox.Show(table.Rows[0][0].ToString().Trim() + table.Rows[0][1].ToString().Trim());
         }
 
         
-        private void Report1Form_Load(object sender, EventArgs e)
-        {
-            reportViewer1.LocalReport.DataSources.Add(reportDataSource);
-            reportViewer1.LocalReport.ReportPath = @"..\..\Reports\Report1.rdlc";
-            GetData(mcatPcatDataTable);
-        }
-
-        public void GetData(Reports.DataSet1.McatPcatDataTable table)
-        {
-            table.Fill(cn);
-            reportDataSource.Name = "DataSet1";
-            this.reportViewer1.RefreshReport();
-        }
     }
 }
