@@ -39,3 +39,5 @@ C:\Users\SMorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\
 C:\Users\SMorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\MCAT_PCAT_FindApplicants\bin\Debug\LECOMSolid.dll
 C:\Users\SMorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\MCAT_PCAT_FindApplicants\bin\Debug\SpreadsheetLight.dll
 C:\Users\SMorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\MCAT_PCAT_FindApplicants\obj\Debug\MCAT_PCAT_FindApplicants.Reports.Report1Form.resources
+C:\Users\smorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\MCAT_PCAT_FindApplicants\bin\Debug\Reports\Report1.rdlc
+C:\Users\smorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\MCAT_PCAT_FindApplicants\obj\Debug\MCAT_PCAT_FindApplicants.Reports.BaseReport.resources

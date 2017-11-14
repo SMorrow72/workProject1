@@ -1,9 +1,11 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿using LECOM;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,33 +13,35 @@ using System.Windows.Forms;
 
 namespace MCAT_PCAT_FindApplicants.Reports
 {
-    public partial class Report1Form : Form
+    public partial class Report1Form : BaseReport
     {
-        public ReportDataSource reportDataSource = new ReportDataSource();
-        public LECOM.SqlConnection cn = new LECOM.SqlConnection("SIS", "Sarah");
+        DataSet1.McatPcatDataTable mcatPcatDataTable = new DataSet1.McatPcatDataTable();
+        
 
-        Reports.DataSet1.McatPcatDataTable mcatPcatDataTable = new Reports.DataSet1.McatPcatDataTable();
-       
-        public Report1Form()
+        public Report1Form(string reportName, bool landscape, Margins margins, Control _parent = null) : base(reportName, landscape, margins, _parent)
         {
             InitializeComponent();
-            reportDataSource.Value = mcatPcatDataTable;
-            GetData(mcatPcatDataTable);
+            reportDataSource.Value = mcatPcatDataTable;   
+            GetData();                               
         }
 
-        
+        public override void AddControls()
+        {
+            reportViewer.LocalReport.ReportPath = @"..\..\Reports\Report1.rdlc"; 
+        }
+
         private void Report1Form_Load(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.DataSources.Add(reportDataSource);
-            reportViewer1.LocalReport.ReportPath = @"..\..\Reports\Report1.rdlc";
-            GetData(mcatPcatDataTable);
+            reportViewer.Visible = true;
+            reportViewer.RefreshReport();
         }
 
-        public void GetData(Reports.DataSet1.McatPcatDataTable table)
+        public override void GetData()
         {
-            table.Fill(cn);
+            mcatPcatDataTable.Fill(cn);
             reportDataSource.Name = "DataSet1";
-            this.reportViewer1.RefreshReport();
-        }
+            reportViewer.RefreshReport();
+            MessageBox.Show(mcatPcatDataTable.Rows[0][0].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][1].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][2].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][3].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][4].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][5].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][6].ToString().Trim());
+        }        
     }
 }

@@ -7,8 +7,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.IO;
+using System.Net.Mime;
 using System.Linq;
+using System.Net.Mail;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,6 +34,9 @@ namespace MCAT_PCAT_FindApplicants
 
         private void sqlConnectButton_Click(object sender, EventArgs e)
         {
+            label1.Text = "Fetching candidacy information...";
+            label1.ResetText();
+
             //define datasets and tables
             DataSet candidacy = new DataSet();
             Reports.DataSet1.CandidacyDataTable candidacyCopy = new Reports.DataSet1.CandidacyDataTable();            
@@ -37,7 +44,7 @@ namespace MCAT_PCAT_FindApplicants
 
             if (maskedTextBox1.Text != null)
             {
-                label1.Text = "Fetching candidacy information...";
+                
                 label2.Text = "";
                 maskedTextBox1.Visible = false;
                 sqlConnectButton.Visible = false;
@@ -59,6 +66,7 @@ namespace MCAT_PCAT_FindApplicants
                     //Check if the SQL Connection is open
                     if(conn.State == System.Data.ConnectionState.Open)
                     {
+                        
                         //configure the sql query
                         //PASS IN AS CMD
                         System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(strSQL, conn);
@@ -86,6 +94,10 @@ namespace MCAT_PCAT_FindApplicants
 
                             if (cn.IsOpen)
                             {
+                                //delete any previously imported data
+                                string deleteSQL = "DELETE FROM LECOM_CURRENT_YEAR_CANDIDACY";
+                                cn.Execute(deleteSQL, SQLTypes.Text);
+
                                 //populate a separate table in Sarah db with this year's candidates  
                                 SqlParameters CParm = new SqlParameters();
                                 CParm.Add("exampleDT", candidacyStrings, SqlDbType.Structured);
@@ -122,19 +134,6 @@ namespace MCAT_PCAT_FindApplicants
                 MessageBox.Show("Year code not valid. Please enter a valid year code.");
             }
 
-            //EXCEL: GO
-
-            //open a connection to the LECOM library
-            
-            if (cn.IsOpen)
-            {
-                
-            }
-            else
-            {
-                MessageBox.Show("Error: connection state is not open. Current state: '" + cn.Connection.State.ToString() + "'");
-            }
-
         }
 
         private void browseButton_Click(object sender, EventArgs e)
@@ -153,6 +152,8 @@ namespace MCAT_PCAT_FindApplicants
                 if (openSheetDialog.ShowDialog() == DialogResult.OK && Path.GetExtension(openSheetDialog.FileName) == ".xlsx")
                 {
                     label1.Text = "Importing spreadsheet data...";
+                    
+                    browseButton.Visible = false;
 
                     //Declare the table that will hold the sheet's data
                     //this will be passed to SQL Server
@@ -194,12 +195,12 @@ namespace MCAT_PCAT_FindApplicants
                     dtParm.Add("exampleDT", mcatPcat, SqlDbType.Structured);
                     dtParm.List[0].TypeName = "dbo.LecomMcatPcatTableType";
                     cn.Execute("dbo.LecomImportMcatPcat", SQLTypes.StoredProcedure, dtParm);
-                    MessageBox.Show("Content Entered into Database!");
+                    label2.Text = "Content Entered into Database!";
 
                     McatPcat.Fill(cn);
 
-                    Report1Form form = new Report1Form();
-                    form.Show();
+                    var report = new MCAT_PCAT_FindApplicants.Reports.Report1Form("MCAT and PCAT results and LECOM Candidate Matching", true, new Margins(25, 25, 25, 25));
+                    report.Show();
 
                 }
                 else
@@ -208,7 +209,6 @@ namespace MCAT_PCAT_FindApplicants
                     openSheetDialog.ShowDialog();
                 }
             }
-        }
-       
+        }       
     }
 }
