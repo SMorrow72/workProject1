@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataSet1 = new MCAT_PCAT_FindApplicants.Reports.DataSet1();
             this.CandidacyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.McatPcatBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -57,6 +59,13 @@
             // 
             // reportViewer
             // 
+            reportDataSource1.Name = "Candidacy";
+            reportDataSource1.Value = this.CandidacyBindingSource;
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.McatPcatBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "MCAT_PCAT_FindApplicants.Reports.Report1.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 32);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.Size = new System.Drawing.Size(932, 477);
@@ -92,7 +101,7 @@
         private System.Windows.Forms.BindingSource CandidacyBindingSource;
         private DataSet1 DataSet1;
         private System.Windows.Forms.BindingSource McatPcatBindingSource;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        protected Microsoft.Reporting.WinForms.ReportViewer reportViewer;
         private System.Windows.Forms.Panel panel1;
     }
 }

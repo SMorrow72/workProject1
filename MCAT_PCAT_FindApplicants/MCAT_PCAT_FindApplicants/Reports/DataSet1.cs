@@ -4,29 +4,6 @@
     using System.Data;
     
     public partial class DataSet1 {
-        partial class MatchesDataTable
-        {
-            public void Fill(SqlConnection conn)
-            {
-
-                
-            
-            }
-
-            private void AddRows(System.Data.DataTable dt)
-            {
-                this.Clear();
-
-                foreach (DataRow dr in dt.Rows)
-                {
-                    var row = (MatchesRow)(this.NewRow());
-
-                    row["Email"] = dr["Email"].ToString().NullToEmptyString(true);
-
-                    this.Rows.Add(row);
-                }
-            }
-        }
 
         partial class McatPcatDataTable
         {

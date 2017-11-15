@@ -2,8 +2,6 @@
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -13,13 +11,12 @@ using System.Windows.Forms;
 
 namespace MCAT_PCAT_FindApplicants.Reports
 {
-    public partial class Report1Form : BaseReport
+    public partial class ReportForm1 : ClinEdReport
     {
         DataSet1.McatPcatDataTable mcatPcatDataTable = new DataSet1.McatPcatDataTable();
-        
-        public Report1Form(string reportName, bool landscape, Margins margins, Control _parent = null) : base(reportName, landscape, margins, _parent)
+
+        public ReportForm1(string reportName, bool landscape, Margins margins, Control _parent = null) : base(reportName, landscape, margins, _parent)
         {
-            InitializeComponent();
             reportDataSource.Value = mcatPcatDataTable;   
             GetData();                               
         }
@@ -29,7 +26,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
             reportViewer.LocalReport.ReportPath = @"..\..\Reports\Report1.rdlc"; 
         }
 
-        private void Report1Form_Load(object sender, EventArgs e)
+        private void ReportForm1_Load(object sender, EventArgs e)
         {
             reportViewer.Visible = true;
             reportViewer.RefreshReport();
@@ -37,10 +34,26 @@ namespace MCAT_PCAT_FindApplicants.Reports
 
         public override void GetData()
         {
-            mcatPcatDataTable.Fill(cn);
+            mcatPcatDataTable.Fill(conn);
             reportDataSource.Name = "DataSet1";
             reportViewer.RefreshReport();
-            MessageBox.Show(mcatPcatDataTable.Rows[0][0].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][1].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][2].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][3].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][4].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][5].ToString().Trim() + " " + mcatPcatDataTable.Rows[0][6].ToString().Trim());
-        }        
+        }
+
+        public override void Refresh()
+        {
+            GetData();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+
+            this.reportViewer.LocalReport.ReportPath = "";
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(938, 515);
+            this.Name = "ReportForm1";
+            this.ResumeLayout(false);
+        }
     }
 }

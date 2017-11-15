@@ -71,6 +71,12 @@
     <Compile Include="Reports\BaseReport.Designer.cs">
       <DependentUpon>BaseReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ClinEdReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ClinEdReport.designer.cs">
+      <DependentUpon>ClinEdReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -80,11 +86,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Report1Form.cs">
+    <Compile Include="Reports\ReportForm1.cs">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\Report1Form.Designer.cs">
-      <DependentUpon>Report1Form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -97,16 +100,18 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\BaseReport.resx">
       <DependentUpon>BaseReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ClinEdReport.resx">
+      <DependentUpon>ClinEdReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Report1Form.resx">
-      <DependentUpon>Report1Form.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\MCAT_PCAT_FindApplicants.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\MCAT_PCAT_FindApplicants.Properties.Settings.datasource" />
@@ -143,6 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Media\ajax-loader.gif" />
+    <None Include="Resources\ajax-loader.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.browseButton = new System.Windows.Forms.Button();
+            this.reportViewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sqlConnectButton
@@ -90,11 +91,23 @@
             this.browseButton.Visible = false;
             this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
+            // reportViewButton
+            // 
+            this.reportViewButton.Location = new System.Drawing.Point(108, 204);
+            this.reportViewButton.Name = "reportViewButton";
+            this.reportViewButton.Size = new System.Drawing.Size(75, 23);
+            this.reportViewButton.TabIndex = 9;
+            this.reportViewButton.Text = "View Report";
+            this.reportViewButton.UseVisualStyleBackColor = true;
+            this.reportViewButton.Visible = false;
+            this.reportViewButton.Click += new System.EventHandler(this.reportViewButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 255);
+            this.Controls.Add(this.reportViewButton);
             this.Controls.Add(this.browseButton);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label2);
@@ -115,6 +128,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button browseButton;
+        private System.Windows.Forms.Button reportViewButton;
     }
 }
 

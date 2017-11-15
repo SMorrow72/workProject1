@@ -551,26 +551,6 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="Candidacy">
-      <Query>
-        <DataSourceName>DataSet1</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Email">
-          <DataField>Email</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\SMorrow\Documents\Visual Studio 2013\Projects\MCAT_PCAT_FindApplicants\MCAT_PCAT_FindApplicants\Reports\DataSet1.xsd</rd:SchemaPath>
-        <rd:TableName>Candidacy</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DataSet1</DataSourceName>

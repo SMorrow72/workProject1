@@ -7,8 +7,8 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.Net.Mail;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,11 +56,14 @@ namespace MCAT_PCAT_FindApplicants.Reports
             panel = (Panel)this.Controls["pnlReport"];
             reportViewer.SetPageSettings(new PageSettings() { Landscape = landscape, Margins = margins });
 
-            //foreach (Control ctrl in panel.Controls)
-            //    if (ctrl.Name != "reportViewer") listRemove.Add(ctrl);
+            //if (panel.Controls != null)
+            //{
+            //    foreach (Control ctrl in panel.Controls)
+            //        if (ctrl.Name != "reportViewer") listRemove.Add(ctrl);
 
-            //foreach (Control ctrl in listRemove)
-            //    panel.Controls.Remove(ctrl);
+            //    foreach (Control ctrl in listRemove)
+            //        panel.Controls.Remove(ctrl);
+            //}
 
             reportViewer.Visible = true;
 
@@ -77,24 +80,21 @@ namespace MCAT_PCAT_FindApplicants.Reports
 
         public virtual void Refresh() { }
 
-        public byte[] GetByteStream(string format = "PDF")
-        {
-            string mimeType = string.Empty, encoding = string.Empty, extension = string.Empty;
-            string[] streamIDs; Warning[] warnings;
-            byte[] bytes = reportViewer.LocalReport.Render(format, null, out mimeType, out encoding, out extension, out streamIDs, out warnings);
-            return bytes;
-        }
+        //public byte[] GetByteStream(string format = "PDF")
+        //{
+        //    string mimeType = string.Empty, encoding = string.Empty, extension = string.Empty;
+        //    string[] streamIDs; Warning[] warnings;
+        //    byte[] bytes = reportViewer.LocalReport.Render(format, null, out mimeType, out encoding, out extension, out streamIDs, out warnings);
+        //    return bytes;
+        //}
 
-        private void ClinEdReportTemp_FormClosed(object sender, FormClosedEventArgs e)
+        private void ReportTemp_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (parent != null) { parent.BringToFront(); }
         }
 
         private void BaseReport_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer.RefreshReport();
-            this.reportViewer.RefreshReport();
         }
     }
 }

@@ -26,6 +26,7 @@ namespace MCAT_PCAT_FindApplicants
         public LECOM.SqlConnection cn = new LECOM.SqlConnection("SIS", "Sarah");
         System.Data.SqlClient.SqlConnection conn;
         ToolTip toolTip1 = new ToolTip();
+        
 
         public Form1()
         {
@@ -33,10 +34,7 @@ namespace MCAT_PCAT_FindApplicants
         }
 
         private void sqlConnectButton_Click(object sender, EventArgs e)
-        {
-            label1.Text = "Fetching candidacy information...";
-            label1.ResetText();
-
+        {                      
             //define datasets and tables
             DataSet candidacy = new DataSet();
             Reports.DataSet1.CandidacyDataTable candidacyCopy = new Reports.DataSet1.CandidacyDataTable();            
@@ -44,8 +42,11 @@ namespace MCAT_PCAT_FindApplicants
 
             if (maskedTextBox1.Text != null)
             {
-                
+                //update UI
+                label1.Text = "Fetching candidacy information, please wait."; 
                 label2.Text = "";
+                label1.Refresh();
+                label2.Refresh();
                 maskedTextBox1.Visible = false;
                 sqlConnectButton.Visible = false;
 
@@ -106,11 +107,8 @@ namespace MCAT_PCAT_FindApplicants
 
                                 label1.Text = "Candidacy import complete! Please click 'Browse' and choose the excel spreadsheet you want to import.";
                                 browseButton.Visible = true;
-
-
-                            }
-
-                            MessageBox.Show("RESULT: " + candidacyStandard.Rows[0][0].ToString().Trim() + " " + candidacyStandard.Rows[1][0].ToString().Trim());
+                            
+                            }                            
                         }
                         else
                         {
@@ -151,7 +149,8 @@ namespace MCAT_PCAT_FindApplicants
 
                 if (openSheetDialog.ShowDialog() == DialogResult.OK && Path.GetExtension(openSheetDialog.FileName) == ".xlsx")
                 {
-                    label1.Text = "Importing spreadsheet data...";
+                    label1.Text = "Importing spreadsheet data, this may take a moment.";
+                    label1.Refresh();
                     
                     browseButton.Visible = false;
 
@@ -184,24 +183,17 @@ namespace MCAT_PCAT_FindApplicants
 
                         //add each row to the datatable
                         mcatPcat.Rows.Add("", aamc, lname, fname, city, state, email);
-                    }
-                    MessageBox.Show("Import complete! " + mcatPcat.Rows[0][1].ToString().Trim() + " " + mcatPcat.Rows[0][2].ToString().Trim() + " " + mcatPcat.Rows[0][3].ToString().Trim());
-
+                    }                   
                     //close the SLDocument as the data is now in a datatable
                     ss.CloseWithoutSaving();
 
-                    //pass the data to an import procedure
+                    //pass the data to an import procedure and save to Sarah database
                     SqlParameters dtParm = new SqlParameters();
                     dtParm.Add("exampleDT", mcatPcat, SqlDbType.Structured);
                     dtParm.List[0].TypeName = "dbo.LecomMcatPcatTableType";
                     cn.Execute("dbo.LecomImportMcatPcat", SQLTypes.StoredProcedure, dtParm);
-                    label2.Text = "Content Entered into Database!";
-
-                    McatPcat.Fill(cn);
-
-                    var report = new MCAT_PCAT_FindApplicants.Reports.Report1Form("MCAT and PCAT results and LECOM Candidate Matching", true, new Margins(25, 25, 25, 25));
-                    report.Show();
-
+                    label1.Text = "Excel Data Entered into Database!";
+                    reportViewButton.Visible = true;                    
                 }
                 else
                 {
@@ -209,6 +201,12 @@ namespace MCAT_PCAT_FindApplicants
                     openSheetDialog.ShowDialog();
                 }
             }
+        }
+
+        private void reportViewButton_Click(object sender, EventArgs e)
+        {
+            var report = new MCAT_PCAT_FindApplicants.Reports.ReportForm1("MCAT/PCAT Results and LECOM Candidate Matching", true, new Margins(25, 25, 25, 25));
+            report.Show();
         }       
     }
 }
