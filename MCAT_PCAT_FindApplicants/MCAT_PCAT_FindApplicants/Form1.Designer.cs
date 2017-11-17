@@ -35,6 +35,7 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.browseButton = new System.Windows.Forms.Button();
             this.reportViewButton = new System.Windows.Forms.Button();
+            this.emailButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sqlConnectButton
@@ -93,20 +94,35 @@
             // 
             // reportViewButton
             // 
-            this.reportViewButton.Location = new System.Drawing.Point(108, 204);
+            this.reportViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportViewButton.Location = new System.Drawing.Point(90, 139);
             this.reportViewButton.Name = "reportViewButton";
-            this.reportViewButton.Size = new System.Drawing.Size(75, 23);
+            this.reportViewButton.Size = new System.Drawing.Size(109, 33);
             this.reportViewButton.TabIndex = 9;
             this.reportViewButton.Text = "View Report";
             this.reportViewButton.UseVisualStyleBackColor = true;
             this.reportViewButton.Visible = false;
             this.reportViewButton.Click += new System.EventHandler(this.reportViewButton_Click);
             // 
+            // emailButton
+            // 
+            this.emailButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailButton.Location = new System.Drawing.Point(90, 188);
+            this.emailButton.Name = "emailButton";
+            this.emailButton.Size = new System.Drawing.Size(109, 33);
+            this.emailButton.TabIndex = 10;
+            this.emailButton.Text = "Email";
+            this.emailButton.UseVisualStyleBackColor = true;
+            this.emailButton.Visible = false;
+            this.emailButton.Click += new System.EventHandler(this.emailButton_Click);
+            // 
             // Form1
             // 
+            this.AcceptButton = this.sqlConnectButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 255);
+            this.Controls.Add(this.emailButton);
             this.Controls.Add(this.reportViewButton);
             this.Controls.Add(this.browseButton);
             this.Controls.Add(this.maskedTextBox1);
@@ -129,6 +145,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button browseButton;
         private System.Windows.Forms.Button reportViewButton;
+        private System.Windows.Forms.Button emailButton;
     }
 }
 
