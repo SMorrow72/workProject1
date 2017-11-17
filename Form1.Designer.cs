@@ -94,9 +94,10 @@
             // 
             // reportViewButton
             // 
-            this.reportViewButton.Location = new System.Drawing.Point(108, 175);
+            this.reportViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportViewButton.Location = new System.Drawing.Point(90, 139);
             this.reportViewButton.Name = "reportViewButton";
-            this.reportViewButton.Size = new System.Drawing.Size(75, 23);
+            this.reportViewButton.Size = new System.Drawing.Size(109, 33);
             this.reportViewButton.TabIndex = 9;
             this.reportViewButton.Text = "View Report";
             this.reportViewButton.UseVisualStyleBackColor = true;
@@ -105,9 +106,10 @@
             // 
             // emailButton
             // 
-            this.emailButton.Location = new System.Drawing.Point(108, 204);
+            this.emailButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailButton.Location = new System.Drawing.Point(90, 188);
             this.emailButton.Name = "emailButton";
-            this.emailButton.Size = new System.Drawing.Size(75, 23);
+            this.emailButton.Size = new System.Drawing.Size(109, 33);
             this.emailButton.TabIndex = 10;
             this.emailButton.Text = "Email";
             this.emailButton.UseVisualStyleBackColor = true;
@@ -116,6 +118,7 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.sqlConnectButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 255);

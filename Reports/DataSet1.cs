@@ -38,35 +38,6 @@
                                 
             }
 
-        }
-    
-        public partial class CandidacyDataTable
-        {
-            public void Fill(SqlConnection conn, string sqlString)
-            {
-
-                AddRows(conn.FetchTable(sqlString, SQLTypes.Text));
-
-            }
-
-            private void AddRows(System.Data.DataTable dt)
-            {
-                this.Clear();
-
-                foreach(DataRow dr in dt.Rows)
-                {
-                    var row = (CandidacyRow)(this.NewRow());
-
-                    row["Email"] = dr["Email"].ToString().NullToEmptyString(true);
-
-                    this.Rows.Add(row);
-                }
-            }
-
-            internal void Fill(System.Data.SqlClient.SqlConnection conn, string strSQL)
-            {
-                //throw new NotImplementedException();
-            }
-        }
+        }         
     }
 }

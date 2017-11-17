@@ -13,6 +13,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
 {
     public partial class ReportForm1 : ClinEdReport
     {
+        //Declare the report data table instance
         DataSet1.McatPcatDataTable mcatPcatDataTable = new DataSet1.McatPcatDataTable();
 
         public ReportForm1(string reportName, bool landscape, Margins margins, Control _parent = null) : base(reportName, landscape, margins, _parent)

@@ -20,6 +20,7 @@ namespace MCAT_PCAT_FindApplicants
         DataTable mailingList = new DataTable();
         DataTable testMailingList = new DataTable();
         public LECOM.SqlConnection cn = new LECOM.SqlConnection("SIS", "Sarah");
+        string fromAddress;
 
         public EmailForm()
         {
@@ -29,71 +30,67 @@ namespace MCAT_PCAT_FindApplicants
             mailingList.Columns.Add("email", typeof(string));
             mailingList.Columns.Add("name", typeof(string));
 
+            fromAddress = NTEnvironment.CurrentUserPrincipal().EmailAddress;
+            fromAddressLabel.Text = fromAddress;
+
             if(cn.IsOpen)
             {
+                //Get info for all non-matches in Mcat Pcat Table
                 mailingList = cn.FetchTable(sqlCommand, SQLTypes.Text);
                 //Console.WriteLine(mailingList.Rows[0][0].ToString().Trim() + " " + mailingList.Rows[0][1].ToString().Trim());
-
             }
 
+            //Test Data Configuration
             testMailingList.Columns.Add("email", typeof(string));
             testMailingList.Columns.Add("name", typeof(string));
 
-            testMailingList.Rows.Add("smorrow72@gmail.com", "Snart");
-            testMailingList.Rows.Add("smorrow1272@gmail.com", "Snart 2: Electric Boogaloo");
-            testMailingList.Rows.Add("smorrow@lecom.edu", "Business!Snart");
+            testMailingList.Rows.Add("smorrow72@gmail.com", "Sarah");
+            testMailingList.Rows.Add("smorrow1272@gmail.com", "Sarah 2: Electric Boogaloo");
+            testMailingList.Rows.Add("smorrow@lecom.edu", "Business!Sarah");
         }
 
         private void sendBtn_Click(object sender, EventArgs e)
         {
-            string FromAddress = NTEnvironment.CurrentUserPrincipal().EmailAddress;
+            
             string subject = subTextBox.Text;
             string body = bodyTextBox.Text;
 
-            SendEmail(testMailingList, "S.Morrow1@edu.salford.ac.uk", FromAddress, subject, body, MailPriority.Normal);
+            SendEmail(testMailingList, fromAddress, subject, body, MailPriority.Normal);
         }
 
-        private void SendEmail(DataTable toTable, string To, string From, string Subject, string Body, MailPriority priority)
-        {
-            
-            //Add a semicolon between each address (?)
-            //TokenizeString(To, ";", ref vtrToken);
-
+        private void SendEmail(DataTable toTable, string From, string Subject, string Body, MailPriority priority)
+        {           
             //Set up SMTP client to send mail on the lecom mail server
             SmtpClient client = new SmtpClient("mailserver.lecom.edu", 25);
 
             //Set Email Addresses
             MailAddress MailFrom = new MailAddress(From, NTEnvironment.CurrentUserPrincipal().EmailAddress);
-            //TODO: Set the source of the To address
-            MailAddress MailTo = new MailAddress(To);
+            //TODO: Check if it sends to this email address too
 
-            MailMessage mail = new MailMessage(MailFrom, MailTo);
-
-            mail.To.Clear();
-            mail.Bcc.Add(MailFrom);
-
-            //Add each address to an array (?)
+            //Add each address to an array of MailMessages
+            List<MailAddress> addressList = new List<MailAddress>();
             for(int r = 0; r < toTable.Rows.Count; r++)
             {
                 //Create a mail address with the email address and name
                 MailAddress MailToTmp = new MailAddress(toTable.Rows[r][0].ToString().Trim(), toTable.Rows[r][1].ToString().Trim());
-                mail.To.Add(MailToTmp);
+                addressList.Add(MailToTmp);
             }
-
-            Console.WriteLine(MailFrom);
-            Console.WriteLine(mail.To[0].Address);
-            Console.WriteLine(mail.To[0].DisplayName);
-
-            mail.Body = MailTo.DisplayName + Body;
-            mail.Subject = Subject;
-            mail.Priority = priority;
-            mail.ReplyToList.Add(mail.From);
-            mail.IsBodyHtml = true;
 
             try
             {
-                //Enable ONLY when testing with test addresses
-                client.Send(mail);
+                foreach(MailAddress address in addressList)
+                {
+                    MailMessage mail = new MailMessage(MailFrom, address);
+                    
+                    mail.Subject = Subject;
+                    mail.Priority = priority;
+                    mail.ReplyToList.Add(mail.From);
+                    mail.IsBodyHtml = false;
+                    mail.Body = "Hello " + address.DisplayName.ToString() + ", " + Environment.NewLine + Environment.NewLine + Body;
+
+                    client.Send(mail);
+                }
+
                 statusLabel.Text = "Emails sent!";
             }
             catch (SmtpFailedRecipientException ex)
@@ -145,6 +142,5 @@ namespace MCAT_PCAT_FindApplicants
                 beg_index = end_index + 1;
             }
         }
-        
     }
 }
