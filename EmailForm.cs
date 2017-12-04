@@ -25,7 +25,7 @@ namespace MCAT_PCAT_FindApplicants
         public EmailForm()
         {
             InitializeComponent();
-            string sqlCommand = "SELECT email, fname FROM LECOM_MCAT_PCAT_TABLE WHERE LECOM != 'Match'";
+            string sqlCommand = "SELECT email, fname FROM LECOM_MCAT_TABLE WHERE LECOM != 'Match'";
 
             mailingList.Columns.Add("email", typeof(string));
             mailingList.Columns.Add("name", typeof(string));
