@@ -12,12 +12,24 @@
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="McatPcat" msprop:Generator_TableClassName="McatPcatDataTable" msprop:Generator_TableVarName="tableMcatPcat" msprop:Generator_TablePropName="McatPcat" msprop:Generator_RowDeletingName="McatPcatRowDeleting" msprop:Generator_RowChangingName="McatPcatRowChanging" msprop:Generator_RowEvHandlerName="McatPcatRowChangeEventHandler" msprop:Generator_RowDeletedName="McatPcatRowDeleted" msprop:Generator_UserTableName="McatPcat" msprop:Generator_RowChangedName="McatPcatRowChanged" msprop:Generator_RowEvArgName="McatPcatRowChangeEvent" msprop:Generator_RowClassName="McatPcatRow">
+        <xs:element name="Mcat" msprop:Generator_TableClassName="McatDataTable" msprop:Generator_TableVarName="tableMcat" msprop:Generator_TablePropName="Mcat" msprop:Generator_RowDeletingName="McatRowDeleting" msprop:Generator_RowChangingName="McatRowChanging" msprop:Generator_RowEvHandlerName="McatRowChangeEventHandler" msprop:Generator_RowDeletedName="McatRowDeleted" msprop:Generator_UserTableName="Mcat" msprop:Generator_RowChangedName="McatRowChanged" msprop:Generator_RowEvArgName="McatRowChangeEvent" msprop:Generator_RowClassName="McatRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LECOM" msprop:Generator_ColumnVarNameInTable="columnLECOM" msprop:Generator_ColumnPropNameInRow="LECOM" msprop:Generator_ColumnPropNameInTable="LECOMColumn" msprop:Generator_UserColumnName="LECOM" type="xs:string" minOccurs="0" />
               <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
-              <xs:element name="aamc_id" msprop:Generator_ColumnVarNameInTable="columnaamc_id" msprop:Generator_ColumnPropNameInRow="aamc_id" msprop:Generator_ColumnPropNameInTable="aamc_idColumn" msprop:Generator_UserColumnName="aamc_id" type="xs:string" />
+              <xs:element name="aamc_id" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="aamc_id" msprop:Generator_ColumnVarNameInTable="columnaamc_id" msprop:Generator_ColumnPropNameInTable="aamc_idColumn" msprop:Generator_UserColumnName="aamc_id" type="xs:string" minOccurs="0" />
+              <xs:element name="lname" msprop:Generator_ColumnVarNameInTable="columnlname" msprop:Generator_ColumnPropNameInRow="lname" msprop:Generator_ColumnPropNameInTable="lnameColumn" msprop:Generator_UserColumnName="lname" type="xs:string" minOccurs="0" />
+              <xs:element name="fname" msprop:Generator_ColumnVarNameInTable="columnfname" msprop:Generator_ColumnPropNameInRow="fname" msprop:Generator_ColumnPropNameInTable="fnameColumn" msprop:Generator_UserColumnName="fname" type="xs:string" minOccurs="0" />
+              <xs:element name="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" msprop:Generator_UserColumnName="city" type="xs:string" minOccurs="0" />
+              <xs:element name="state_cd" msprop:Generator_ColumnVarNameInTable="columnstate_cd" msprop:Generator_ColumnPropNameInRow="state_cd" msprop:Generator_ColumnPropNameInTable="state_cdColumn" msprop:Generator_UserColumnName="state_cd" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pcat" msprop:Generator_TableClassName="PcatDataTable" msprop:Generator_TableVarName="tablePcat" msprop:Generator_TablePropName="Pcat" msprop:Generator_RowDeletingName="PcatRowDeleting" msprop:Generator_RowChangingName="PcatRowChanging" msprop:Generator_RowEvHandlerName="PcatRowChangeEventHandler" msprop:Generator_RowDeletedName="PcatRowDeleted" msprop:Generator_UserTableName="Pcat" msprop:Generator_RowChangedName="PcatRowChanged" msprop:Generator_RowEvArgName="PcatRowChangeEvent" msprop:Generator_RowClassName="PcatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LECOM" msprop:Generator_ColumnVarNameInTable="columnLECOM" msprop:Generator_ColumnPropNameInRow="LECOM" msprop:Generator_ColumnPropNameInTable="LECOMColumn" msprop:Generator_UserColumnName="LECOM" type="xs:string" minOccurs="0" />
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" type="xs:string" minOccurs="0" />
               <xs:element name="lname" msprop:Generator_ColumnVarNameInTable="columnlname" msprop:Generator_ColumnPropNameInRow="lname" msprop:Generator_ColumnPropNameInTable="lnameColumn" msprop:Generator_UserColumnName="lname" type="xs:string" minOccurs="0" />
               <xs:element name="fname" msprop:Generator_ColumnVarNameInTable="columnfname" msprop:Generator_ColumnPropNameInRow="fname" msprop:Generator_ColumnPropNameInTable="fnameColumn" msprop:Generator_UserColumnName="fname" type="xs:string" minOccurs="0" />
               <xs:element name="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" msprop:Generator_UserColumnName="city" type="xs:string" minOccurs="0" />
@@ -27,9 +39,5 @@
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="McatPcatKey1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:McatPcat" />
-      <xs:field xpath="mstns:aamc_id" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

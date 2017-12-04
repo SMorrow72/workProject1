@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.OpenSheetFile = new System.Windows.Forms.OpenFileDialog();
             this.sqlConnectButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.browseButton = new System.Windows.Forms.Button();
-            this.reportViewButton = new System.Windows.Forms.Button();
+            this.mcatBrowseButton = new System.Windows.Forms.Button();
+            this.mcatReportViewButton = new System.Windows.Forms.Button();
             this.emailButton = new System.Windows.Forms.Button();
+            this.pcatBrowseButton = new System.Windows.Forms.Button();
+            this.pcatReportViewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sqlConnectButton
@@ -81,28 +84,28 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(32, 20);
             this.maskedTextBox1.TabIndex = 7;
             // 
-            // browseButton
+            // mcatBrowseButton
             // 
-            this.browseButton.Location = new System.Drawing.Point(108, 175);
-            this.browseButton.Name = "browseButton";
-            this.browseButton.Size = new System.Drawing.Size(75, 23);
-            this.browseButton.TabIndex = 8;
-            this.browseButton.Text = "Browse...";
-            this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Visible = false;
-            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
+            this.mcatBrowseButton.Location = new System.Drawing.Point(82, 145);
+            this.mcatBrowseButton.Name = "mcatBrowseButton";
+            this.mcatBrowseButton.Size = new System.Drawing.Size(126, 23);
+            this.mcatBrowseButton.TabIndex = 8;
+            this.mcatBrowseButton.Text = "Choose MCAT Sheet";
+            this.mcatBrowseButton.UseVisualStyleBackColor = true;
+            this.mcatBrowseButton.Visible = false;
+            this.mcatBrowseButton.Click += new System.EventHandler(this.mcatBrowseButton_Click);
             // 
-            // reportViewButton
+            // mcatReportViewButton
             // 
-            this.reportViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reportViewButton.Location = new System.Drawing.Point(90, 139);
-            this.reportViewButton.Name = "reportViewButton";
-            this.reportViewButton.Size = new System.Drawing.Size(109, 33);
-            this.reportViewButton.TabIndex = 9;
-            this.reportViewButton.Text = "View Report";
-            this.reportViewButton.UseVisualStyleBackColor = true;
-            this.reportViewButton.Visible = false;
-            this.reportViewButton.Click += new System.EventHandler(this.reportViewButton_Click);
+            this.mcatReportViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mcatReportViewButton.Location = new System.Drawing.Point(90, 139);
+            this.mcatReportViewButton.Name = "mcatReportViewButton";
+            this.mcatReportViewButton.Size = new System.Drawing.Size(109, 33);
+            this.mcatReportViewButton.TabIndex = 9;
+            this.mcatReportViewButton.Text = "View Report";
+            this.mcatReportViewButton.UseVisualStyleBackColor = true;
+            this.mcatReportViewButton.Visible = false;
+            this.mcatReportViewButton.Click += new System.EventHandler(this.mcatReportViewButton_Click);
             // 
             // emailButton
             // 
@@ -116,21 +119,47 @@
             this.emailButton.Visible = false;
             this.emailButton.Click += new System.EventHandler(this.emailButton_Click);
             // 
+            // pcatBrowseButton
+            // 
+            this.pcatBrowseButton.Location = new System.Drawing.Point(82, 194);
+            this.pcatBrowseButton.Name = "pcatBrowseButton";
+            this.pcatBrowseButton.Size = new System.Drawing.Size(126, 23);
+            this.pcatBrowseButton.TabIndex = 11;
+            this.pcatBrowseButton.Text = "Choose PCAT Sheet";
+            this.pcatBrowseButton.UseVisualStyleBackColor = true;
+            this.pcatBrowseButton.Visible = false;
+            this.pcatBrowseButton.Click += new System.EventHandler(this.pcatBrowseButton_Click);
+            // 
+            // pcatReportViewButton
+            // 
+            this.pcatReportViewButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pcatReportViewButton.Location = new System.Drawing.Point(90, 139);
+            this.pcatReportViewButton.Name = "pcatReportViewButton";
+            this.pcatReportViewButton.Size = new System.Drawing.Size(109, 33);
+            this.pcatReportViewButton.TabIndex = 12;
+            this.pcatReportViewButton.Text = "View Report";
+            this.pcatReportViewButton.UseVisualStyleBackColor = true;
+            this.pcatReportViewButton.Visible = false;
+            this.pcatReportViewButton.Click += new System.EventHandler(this.pcatReportViewButton_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.sqlConnectButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 255);
+            this.Controls.Add(this.pcatReportViewButton);
+            this.Controls.Add(this.pcatBrowseButton);
             this.Controls.Add(this.emailButton);
-            this.Controls.Add(this.reportViewButton);
-            this.Controls.Add(this.browseButton);
+            this.Controls.Add(this.mcatReportViewButton);
+            this.Controls.Add(this.mcatBrowseButton);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sqlConnectButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Find Matches";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,9 +172,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Button browseButton;
-        private System.Windows.Forms.Button reportViewButton;
+        private System.Windows.Forms.Button mcatBrowseButton;
+        private System.Windows.Forms.Button mcatReportViewButton;
         private System.Windows.Forms.Button emailButton;
+        private System.Windows.Forms.Button pcatBrowseButton;
+        private System.Windows.Forms.Button pcatReportViewButton;
     }
 }
 
