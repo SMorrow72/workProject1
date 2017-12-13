@@ -31,7 +31,7 @@ namespace MCAT_PCAT_FindApplicants
         public Form1()
         {
             InitializeComponent();
-            cn = this.WSqlConnection("MCAT_PCAT_FindApplicants", "SIS", "Sarah");
+            cn = this.WSqlConnection("MCAT_PCAT_FindApplicants", "SIS", "TmsEprd");
         }
 
         //This button gets LECOM Candidates
@@ -100,7 +100,7 @@ namespace MCAT_PCAT_FindApplicants
                                     SqlParameters CParm = new SqlParameters();
                                     CParm.Add("exampleDT", candidacyStrings, SqlDbType.Structured);
                                     CParm.List[0].TypeName = "dbo.LecomMatchingCurrentYearCandidacyTableType";
-                                    cn.Execute("dbo.LecomMatchingCurrentYearCandidacy", SQLTypes.StoredProcedure, CParm);
+                                    cn.Execute("dbo.Lecom_MatchingCurrentYearCandidacy", SQLTypes.StoredProcedure, CParm);
 
                                     label1.Text = "Candidate import complete! Please click 'Browse' and choose the excel spreadsheet you want to import.";
                                     //Make options available
@@ -273,12 +273,12 @@ namespace MCAT_PCAT_FindApplicants
                         if (cn.IsOpen)
                         {
                             //clear any old results from the table
-                            cn.Execute("TRUNCATE TABLE LECOM_MATCHING_MCAT_TABLE", SQLTypes.Text);
+                            cn.Execute("DELETE FROM LECOM_MATCHING_MCAT_TABLE", SQLTypes.Text);
 
                             SqlParameters dtParm = new SqlParameters();
                             dtParm.Add("exampleDT", mcatTable, SqlDbType.Structured);
                             dtParm.List[0].TypeName = "dbo.LecomMatchingMcatTableType";
-                            cn.Execute("dbo.LecomMatchingImportMcat", SQLTypes.StoredProcedure, dtParm);
+                            cn.Execute("dbo.Lecom_MatchingImportMcat", SQLTypes.StoredProcedure, dtParm);
                             label1.Text = "Excel data import complete! Click below to view the match report.";
                             mcatReportViewButton.Visible = true;
                         }
@@ -344,12 +344,12 @@ namespace MCAT_PCAT_FindApplicants
                         if (cn.IsOpen)
                         {
                             //clear any old results from the table
-                            cn.Execute("TRUNCATE TABLE LECOM_MATCHING_PCAT_TABLE", SQLTypes.Text);
+                            cn.Execute("DELETE FROM LECOM_MATCHING_PCAT_TABLE", SQLTypes.Text);
 
                             SqlParameters dtParm = new SqlParameters();
                             dtParm.Add("exampleDT", pcatTable, SqlDbType.Structured);
                             dtParm.List[0].TypeName = "dbo.LecomMatchingPcatTableType";
-                            cn.Execute("dbo.LecomMatchingImportPcat", SQLTypes.StoredProcedure, dtParm);
+                            cn.Execute("dbo.Lecom_MatchingImportPcat", SQLTypes.StoredProcedure, dtParm);
                             label1.Text = "Excel data import complete! Click below to view the match report.";
                             pcatReportViewButton.Visible = true;
                         }

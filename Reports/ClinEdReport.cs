@@ -33,7 +33,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
             InitializeComponent();
             this.Text = reportName;
             parent = _parent;
-            conn = this.WSqlConnection(reportName, "SIS", "Sarah");
+            conn = this.WSqlConnection(reportName, "SIS", "TmsEprd");
             reportViewer.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
             reportViewer.LocalReport.DataSources.Add(reportDataSource);
             reportViewer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -45,7 +45,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
         public void Initialize(string reportName, bool landscape, Margins margins)
         {
             List<Control> listRemove = new List<Control>();
-            conn = this.WSqlConnection(reportName, "SIS", "Sarah");
+            conn = this.WSqlConnection(reportName, "SIS", "TmsEprd");
             panel = (Panel)this.Controls["pnlReport"];
             reportViewer.SetPageSettings(new PageSettings() { Landscape = landscape, Margins = margins });
 

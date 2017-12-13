@@ -8,7 +8,7 @@
         {
             public void Fill(SqlConnection conn)
             {
-                conn.Execute("dbo.LecomMatchingUpdatePcatMatches", SQLTypes.StoredProcedure);
+                conn.Execute("dbo.Lecom_MatchingUpdatePcatMatches", SQLTypes.StoredProcedure);
 
                 string commandText = "SELECT * FROM LECOM_MATCHING_PCAT_TABLE ORDER BY [LECOM] DESC";
 
@@ -46,7 +46,7 @@
         {
            public void Fill(SqlConnection conn)
             {
-                conn.Execute("dbo.LecomMatchingUpdateMcatMatches", SQLTypes.StoredProcedure);
+                conn.Execute("dbo.Lecom_MatchingUpdateMcatMatches", SQLTypes.StoredProcedure);
 
                 string commandText = "SELECT * FROM LECOM_MATCHING_MCAT_TABLE ORDER BY [LECOM] DESC";
 
