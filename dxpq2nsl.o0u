@@ -22,19 +22,19 @@ namespace MCAT_PCAT_FindApplicants
     public partial class Form1 : Form
     {
         public ReportDataSource reportDataSource = new ReportDataSource();
-        public LECOM.SqlConnection cn;
+        public LECOM.SqlConnection cn = new LECOM.SqlConnection("SIS", "Sarah");
         System.Data.SqlClient.SqlConnection conn;
-        //define data tables to hold excel data in C#
+        ToolTip toolTip1 = new ToolTip();
+        //Define a standard data table
         DataTable pcatTable = new DataTable();
         DataTable mcatTable = new DataTable();
         
         public Form1()
         {
             InitializeComponent();
-            cn = this.WSqlConnection("MCAT_PCAT_FindApplicants", "SIS", "Sarah");
+            
         }
 
-        //This button gets LECOM Candidates
         private void sqlConnectButton_Click(object sender, EventArgs e)
         {                      
             //define datasets and tables
@@ -61,7 +61,6 @@ namespace MCAT_PCAT_FindApplicants
 
                     try
                     {
-                        //This connection is different from cn
                         conn = new System.Data.SqlClient.SqlConnection(connectionString);
                         conn.Open();
 
@@ -94,42 +93,42 @@ namespace MCAT_PCAT_FindApplicants
                                 if (cn.IsOpen)
                                 {
                                     //delete any previously imported candidates
-                                    cn.Execute("DELETE FROM LECOM_MATCHING_CURRENT_YEAR_CANDIDACY", SQLTypes.Text);
+                                    string deleteSQL = "DELETE FROM LECOM_CURRENT_YEAR_CANDIDACY";
+                                    cn.Execute(deleteSQL, SQLTypes.Text);
 
                                     //populate a separate table in Sarah db with this year's candidates  
                                     SqlParameters CParm = new SqlParameters();
                                     CParm.Add("exampleDT", candidacyStrings, SqlDbType.Structured);
-                                    CParm.List[0].TypeName = "dbo.LecomMatchingCurrentYearCandidacyTableType";
-                                    cn.Execute("dbo.LecomMatchingCurrentYearCandidacy", SQLTypes.StoredProcedure, CParm);
+                                    CParm.List[0].TypeName = "dbo.LecomCurrentYearCandidacyTableType2";
+                                    cn.Execute("dbo.LecomCurrentYearCandidacy", SQLTypes.StoredProcedure, CParm);
 
                                     label1.Text = "Candidate import complete! Please click 'Browse' and choose the excel spreadsheet you want to import.";
-                                    //Make options available
                                     mcatBrowseButton.Visible = true;
                                     pcatBrowseButton.Visible = true;
 
                                     //prep for excel import
                                     
-                                    //Declare the MCAT table's columns
-                                    mcatTable.Columns.Add("LECOM", typeof(string)).MaxLength = 5;
-                                    mcatTable.Columns.Add("legal_state_cd", typeof(string)).MaxLength = 2;
-                                    mcatTable.Columns.Add("aamc_id", typeof(string)).MaxLength = 8;
+                                    //Declare the standard data table's columns
+                                    mcatTable.Columns.Add("LECOM", typeof(string));
+                                    mcatTable.Columns.Add("legal_state_cd", typeof(string));
+                                    mcatTable.Columns.Add("aamc_id", typeof(string));
                                     mcatTable.Columns.Add("test_date", typeof(DateTime));
-                                    mcatTable.Columns.Add("lname", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("fname", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("mname", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("suffix", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("address", typeof(string)).MaxLength = 256;
-                                    mcatTable.Columns.Add("city", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("state_cd", typeof(string)).MaxLength = 2;
-                                    mcatTable.Columns.Add("postal_cd", typeof(string)).MaxLength = 20;
-                                    mcatTable.Columns.Add("country", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("email", typeof(string)).MaxLength = 50;
-                                    mcatTable.Columns.Add("sex", typeof(string)).MaxLength = 1;
+                                    mcatTable.Columns.Add("lname", typeof(string));
+                                    mcatTable.Columns.Add("fname", typeof(string));
+                                    mcatTable.Columns.Add("mname", typeof(string));
+                                    mcatTable.Columns.Add("suffix", typeof(string));
+                                    mcatTable.Columns.Add("address", typeof(string));
+                                    mcatTable.Columns.Add("city", typeof(string));
+                                    mcatTable.Columns.Add("state_cd", typeof(string));
+                                    mcatTable.Columns.Add("postal_cd", typeof(string));
+                                    mcatTable.Columns.Add("country", typeof(string));
+                                    mcatTable.Columns.Add("email", typeof(string));
+                                    mcatTable.Columns.Add("sex", typeof(string));
                                     mcatTable.Columns.Add("age_at_test", typeof(int));
-                                    mcatTable.Columns.Add("major_cd", typeof(string)).MaxLength = 2;
-                                    mcatTable.Columns.Add("major", typeof(string)).MaxLength = 50;
+                                    mcatTable.Columns.Add("major_cd", typeof(string));
+                                    mcatTable.Columns.Add("major", typeof(string));
                                     mcatTable.Columns.Add("primary_interest_cd", typeof(string));
-                                    mcatTable.Columns.Add("primary_interest", typeof(string)).MaxLength = 50;
+                                    mcatTable.Columns.Add("primary_interest", typeof(string));
                                     mcatTable.Columns.Add("cpbs_score", typeof(int));
                                     mcatTable.Columns.Add("cpbs_cb_lower", typeof(int));
                                     mcatTable.Columns.Add("cpbs_cb_upper", typeof(int));
@@ -151,18 +150,17 @@ namespace MCAT_PCAT_FindApplicants
                                     mcatTable.Columns.Add("total_cb_upper", typeof(int));
                                     mcatTable.Columns.Add("total_%ile_rank", typeof(int));
 
-                                    //PCAT table columns
-                                    pcatTable.Columns.Add("LECOM", typeof(string)).MaxLength = 5;
-                                    pcatTable.Columns.Add("lname", typeof(string)).MaxLength = 50;
-                                    pcatTable.Columns.Add("fname", typeof(string)).MaxLength = 50;
-                                    pcatTable.Columns.Add("MI", typeof(string)).MaxLength = 1;
-                                    pcatTable.Columns.Add("email", typeof(string)).MaxLength = 50;
-                                    pcatTable.Columns.Add("address1", typeof(string)).MaxLength = 100;
-                                    pcatTable.Columns.Add("address2", typeof(string)).MaxLength = 100;
-                                    pcatTable.Columns.Add("city", typeof(string)).MaxLength = 50;
-                                    pcatTable.Columns.Add("state", typeof(string)).MaxLength = 2;
-                                    pcatTable.Columns.Add("zip", typeof(string)).MaxLength = 20;
-                                    pcatTable.Columns.Add("country", typeof(string)).MaxLength = 20;
+                                    pcatTable.Columns.Add("LECOM", typeof(string));
+                                    pcatTable.Columns.Add("lname", typeof(string));
+                                    pcatTable.Columns.Add("fname", typeof(string));
+                                    pcatTable.Columns.Add("MI", typeof(string));
+                                    pcatTable.Columns.Add("email", typeof(string));
+                                    pcatTable.Columns.Add("address1", typeof(string));
+                                    pcatTable.Columns.Add("address2", typeof(string));
+                                    pcatTable.Columns.Add("city", typeof(string));
+                                    pcatTable.Columns.Add("state", typeof(string));
+                                    pcatTable.Columns.Add("zip", typeof(string));
+                                    pcatTable.Columns.Add("country", typeof(string));
 
                                 }
                             }
@@ -212,7 +210,6 @@ namespace MCAT_PCAT_FindApplicants
                         label1.Text = "Importing spreadsheet data. This may take a moment.";
                         label1.Refresh();
                         mcatBrowseButton.Visible = false;
-                        mcatBrowseButton.Refresh();
                         pcatBrowseButton.Visible = false;
                                            
                         //open the file as a Spreadsheet Light document
@@ -273,14 +270,15 @@ namespace MCAT_PCAT_FindApplicants
                         if (cn.IsOpen)
                         {
                             //clear any old results from the table
-                            cn.Execute("TRUNCATE TABLE LECOM_MATCHING_MCAT_TABLE", SQLTypes.Text);
+                            cn.Execute("TRUNCATE TABLE LECOM_MCAT_TABLE", SQLTypes.Text);
 
                             SqlParameters dtParm = new SqlParameters();
                             dtParm.Add("exampleDT", mcatTable, SqlDbType.Structured);
-                            dtParm.List[0].TypeName = "dbo.LecomMatchingMcatTableType";
-                            cn.Execute("dbo.LecomMatchingImportMcat", SQLTypes.StoredProcedure, dtParm);
+                            dtParm.List[0].TypeName = "dbo.LecomMcatTableType2";
+                            cn.Execute("dbo.LecomImportMcat", SQLTypes.StoredProcedure, dtParm);
                             label1.Text = "Excel data import complete! Click below to view the match report.";
                             mcatReportViewButton.Visible = true;
+                            //emailButton.Visible = true;
                         }
 
                     }
@@ -310,10 +308,7 @@ namespace MCAT_PCAT_FindApplicants
                     {
                         label1.Text = "Importing spreadsheet data. This may take a moment.";
                         label1.Refresh();
-
-                        //Update UI
                         mcatBrowseButton.Visible = false;
-                        mcatBrowseButton.Refresh();
                         pcatBrowseButton.Visible = false;
 
                         //open the file as a Spreadsheet Light document
@@ -336,7 +331,7 @@ namespace MCAT_PCAT_FindApplicants
                             string country = ss.GetCellValueAsString(r, 11).Trim();
                            
                             //add each row to the standard data table
-                            pcatTable.Rows.Add("", lname, fname, mi, email, address1, address2, city, state, zip, country);
+                            pcatTable.Rows.Add("", lname, fname, city, state, email);
                         }
                         //close the SLDocument, as the data is now in a datatable
                         ss.CloseWithoutSaving();
@@ -344,12 +339,12 @@ namespace MCAT_PCAT_FindApplicants
                         if (cn.IsOpen)
                         {
                             //clear any old results from the table
-                            cn.Execute("TRUNCATE TABLE LECOM_MATCHING_PCAT_TABLE", SQLTypes.Text);
+                            cn.Execute("TRUNCATE TABLE LECOM_PCAT_TABLE", SQLTypes.Text);
 
                             SqlParameters dtParm = new SqlParameters();
                             dtParm.Add("exampleDT", pcatTable, SqlDbType.Structured);
-                            dtParm.List[0].TypeName = "dbo.LecomMatchingPcatTableType";
-                            cn.Execute("dbo.LecomMatchingImportPcat", SQLTypes.StoredProcedure, dtParm);
+                            dtParm.List[0].TypeName = "dbo.LecomPcatTableType2";
+                            cn.Execute("dbo.LecomImportPcat", SQLTypes.StoredProcedure, dtParm);
                             label1.Text = "Excel data import complete! Click below to view the match report.";
                             pcatReportViewButton.Visible = true;
                         }

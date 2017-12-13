@@ -59,15 +59,5 @@ namespace MCAT_PCAT_FindApplicants.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ajax_loader {
-            get {
-                object obj = ResourceManager.GetObject("ajax-loader", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

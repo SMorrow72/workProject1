@@ -316,17 +316,83 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             private global::System.Data.DataColumn columnLECOM;
             
-            private global::System.Data.DataColumn columnEmail;
+            private global::System.Data.DataColumn columnlegal_state_cd;
             
             private global::System.Data.DataColumn columnaamc_id;
+            
+            private global::System.Data.DataColumn columntest_date;
             
             private global::System.Data.DataColumn columnlname;
             
             private global::System.Data.DataColumn columnfname;
             
+            private global::System.Data.DataColumn columnmname;
+            
+            private global::System.Data.DataColumn columnsuffix;
+            
+            private global::System.Data.DataColumn columnaddress;
+            
             private global::System.Data.DataColumn columncity;
             
             private global::System.Data.DataColumn columnstate_cd;
+            
+            private global::System.Data.DataColumn columnpostal_cd;
+            
+            private global::System.Data.DataColumn columncountry;
+            
+            private global::System.Data.DataColumn columnEmail;
+            
+            private global::System.Data.DataColumn columnsex;
+            
+            private global::System.Data.DataColumn columnage_at_test;
+            
+            private global::System.Data.DataColumn columnmajor_cd;
+            
+            private global::System.Data.DataColumn columnmajor;
+            
+            private global::System.Data.DataColumn columnprimary_interest_cd;
+            
+            private global::System.Data.DataColumn columnprimary_interest;
+            
+            private global::System.Data.DataColumn columncpbs_score;
+            
+            private global::System.Data.DataColumn columncpbs_cb_lower;
+            
+            private global::System.Data.DataColumn columncpbs_cb_upper;
+            
+            private global::System.Data.DataColumn columncpbs_percentile_rank;
+            
+            private global::System.Data.DataColumn columncars_score;
+            
+            private global::System.Data.DataColumn columncars_cb_lower;
+            
+            private global::System.Data.DataColumn columncars_cb_upper;
+            
+            private global::System.Data.DataColumn columncars_percentile_rank;
+            
+            private global::System.Data.DataColumn columnbbfl_score;
+            
+            private global::System.Data.DataColumn columnbbfl_cb_lower;
+            
+            private global::System.Data.DataColumn columnbbfl_cb_upper;
+            
+            private global::System.Data.DataColumn columnbbfl_percentile_rank;
+            
+            private global::System.Data.DataColumn columnpsbb_score;
+            
+            private global::System.Data.DataColumn columnpsbb_cb_lower;
+            
+            private global::System.Data.DataColumn columnpsbb_cb_upper;
+            
+            private global::System.Data.DataColumn columnpsbb_percentile_rank;
+            
+            private global::System.Data.DataColumn columntotal_score;
+            
+            private global::System.Data.DataColumn columntotal_cb_lower;
+            
+            private global::System.Data.DataColumn columntotal_cb_upper;
+            
+            private global::System.Data.DataColumn columntotal_percentile_rank;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -371,9 +437,9 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EmailColumn {
+            public global::System.Data.DataColumn legal_state_cdColumn {
                 get {
-                    return this.columnEmail;
+                    return this.columnlegal_state_cd;
                 }
             }
             
@@ -382,6 +448,14 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             public global::System.Data.DataColumn aamc_idColumn {
                 get {
                     return this.columnaamc_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn test_dateColumn {
+                get {
+                    return this.columntest_date;
                 }
             }
             
@@ -403,6 +477,30 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn mnameColumn {
+                get {
+                    return this.columnmname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn suffixColumn {
+                get {
+                    return this.columnsuffix;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn addressColumn {
+                get {
+                    return this.columnaddress;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn cityColumn {
                 get {
                     return this.columncity;
@@ -414,6 +512,238 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             public global::System.Data.DataColumn state_cdColumn {
                 get {
                     return this.columnstate_cd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn postal_cdColumn {
+                get {
+                    return this.columnpostal_cd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn countryColumn {
+                get {
+                    return this.columncountry;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EmailColumn {
+                get {
+                    return this.columnEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn sexColumn {
+                get {
+                    return this.columnsex;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn age_at_testColumn {
+                get {
+                    return this.columnage_at_test;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn major_cdColumn {
+                get {
+                    return this.columnmajor_cd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn majorColumn {
+                get {
+                    return this.columnmajor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn primary_interest_cdColumn {
+                get {
+                    return this.columnprimary_interest_cd;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn primary_interestColumn {
+                get {
+                    return this.columnprimary_interest;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpbs_scoreColumn {
+                get {
+                    return this.columncpbs_score;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpbs_cb_lowerColumn {
+                get {
+                    return this.columncpbs_cb_lower;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpbs_cb_upperColumn {
+                get {
+                    return this.columncpbs_cb_upper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cpbs_percentile_rankColumn {
+                get {
+                    return this.columncpbs_percentile_rank;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cars_scoreColumn {
+                get {
+                    return this.columncars_score;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cars_cb_lowerColumn {
+                get {
+                    return this.columncars_cb_lower;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cars_cb_upperColumn {
+                get {
+                    return this.columncars_cb_upper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cars_percentile_rankColumn {
+                get {
+                    return this.columncars_percentile_rank;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn bbfl_scoreColumn {
+                get {
+                    return this.columnbbfl_score;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn bbfl_cb_lowerColumn {
+                get {
+                    return this.columnbbfl_cb_lower;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn bbfl_cb_upperColumn {
+                get {
+                    return this.columnbbfl_cb_upper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn bbfl_percentile_rankColumn {
+                get {
+                    return this.columnbbfl_percentile_rank;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn psbb_scoreColumn {
+                get {
+                    return this.columnpsbb_score;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn psbb_cb_lowerColumn {
+                get {
+                    return this.columnpsbb_cb_lower;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn psbb_cb_upperColumn {
+                get {
+                    return this.columnpsbb_cb_upper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn psbb_percentile_rankColumn {
+                get {
+                    return this.columnpsbb_percentile_rank;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn total_scoreColumn {
+                get {
+                    return this.columntotal_score;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn total_cb_lowerColumn {
+                get {
+                    return this.columntotal_cb_lower;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn total_cb_upperColumn {
+                get {
+                    return this.columntotal_cb_upper;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn total_percentile_rankColumn {
+                get {
+                    return this.columntotal_percentile_rank;
                 }
             }
             
@@ -454,16 +784,89 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public McatRow AddMcatRow(string LECOM, string Email, string aamc_id, string lname, string fname, string city, string state_cd) {
+            public McatRow AddMcatRow(
+                        string LECOM, 
+                        string legal_state_cd, 
+                        string aamc_id, 
+                        string test_date, 
+                        string lname, 
+                        string fname, 
+                        string mname, 
+                        string suffix, 
+                        string address, 
+                        string city, 
+                        string state_cd, 
+                        string postal_cd, 
+                        string country, 
+                        string Email, 
+                        string sex, 
+                        string age_at_test, 
+                        string major_cd, 
+                        string major, 
+                        string primary_interest_cd, 
+                        string primary_interest, 
+                        string cpbs_score, 
+                        string cpbs_cb_lower, 
+                        string cpbs_cb_upper, 
+                        string cpbs_percentile_rank, 
+                        string cars_score, 
+                        string cars_cb_lower, 
+                        string cars_cb_upper, 
+                        string cars_percentile_rank, 
+                        string bbfl_score, 
+                        string bbfl_cb_lower, 
+                        string bbfl_cb_upper, 
+                        string bbfl_percentile_rank, 
+                        string psbb_score, 
+                        string psbb_cb_lower, 
+                        string psbb_cb_upper, 
+                        string psbb_percentile_rank, 
+                        string total_score, 
+                        string total_cb_lower, 
+                        string total_cb_upper, 
+                        string total_percentile_rank) {
                 McatRow rowMcatRow = ((McatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         LECOM,
-                        Email,
+                        legal_state_cd,
                         aamc_id,
+                        test_date,
                         lname,
                         fname,
+                        mname,
+                        suffix,
+                        address,
                         city,
-                        state_cd};
+                        state_cd,
+                        postal_cd,
+                        country,
+                        Email,
+                        sex,
+                        age_at_test,
+                        major_cd,
+                        major,
+                        primary_interest_cd,
+                        primary_interest,
+                        cpbs_score,
+                        cpbs_cb_lower,
+                        cpbs_cb_upper,
+                        cpbs_percentile_rank,
+                        cars_score,
+                        cars_cb_lower,
+                        cars_cb_upper,
+                        cars_percentile_rank,
+                        bbfl_score,
+                        bbfl_cb_lower,
+                        bbfl_cb_upper,
+                        bbfl_percentile_rank,
+                        psbb_score,
+                        psbb_cb_lower,
+                        psbb_cb_upper,
+                        psbb_percentile_rank,
+                        total_score,
+                        total_cb_lower,
+                        total_cb_upper,
+                        total_percentile_rank};
                 rowMcatRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMcatRow);
                 return rowMcatRow;
@@ -487,12 +890,45 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnLECOM = base.Columns["LECOM"];
-                this.columnEmail = base.Columns["Email"];
+                this.columnlegal_state_cd = base.Columns["legal_state_cd"];
                 this.columnaamc_id = base.Columns["aamc_id"];
+                this.columntest_date = base.Columns["test_date"];
                 this.columnlname = base.Columns["lname"];
                 this.columnfname = base.Columns["fname"];
+                this.columnmname = base.Columns["mname"];
+                this.columnsuffix = base.Columns["suffix"];
+                this.columnaddress = base.Columns["address"];
                 this.columncity = base.Columns["city"];
                 this.columnstate_cd = base.Columns["state_cd"];
+                this.columnpostal_cd = base.Columns["postal_cd"];
+                this.columncountry = base.Columns["country"];
+                this.columnEmail = base.Columns["Email"];
+                this.columnsex = base.Columns["sex"];
+                this.columnage_at_test = base.Columns["age_at_test"];
+                this.columnmajor_cd = base.Columns["major_cd"];
+                this.columnmajor = base.Columns["major"];
+                this.columnprimary_interest_cd = base.Columns["primary_interest_cd"];
+                this.columnprimary_interest = base.Columns["primary_interest"];
+                this.columncpbs_score = base.Columns["cpbs_score"];
+                this.columncpbs_cb_lower = base.Columns["cpbs_cb_lower"];
+                this.columncpbs_cb_upper = base.Columns["cpbs_cb_upper"];
+                this.columncpbs_percentile_rank = base.Columns["cpbs_percentile_rank"];
+                this.columncars_score = base.Columns["cars_score"];
+                this.columncars_cb_lower = base.Columns["cars_cb_lower"];
+                this.columncars_cb_upper = base.Columns["cars_cb_upper"];
+                this.columncars_percentile_rank = base.Columns["cars_percentile_rank"];
+                this.columnbbfl_score = base.Columns["bbfl_score"];
+                this.columnbbfl_cb_lower = base.Columns["bbfl_cb_lower"];
+                this.columnbbfl_cb_upper = base.Columns["bbfl_cb_upper"];
+                this.columnbbfl_percentile_rank = base.Columns["bbfl_percentile_rank"];
+                this.columnpsbb_score = base.Columns["psbb_score"];
+                this.columnpsbb_cb_lower = base.Columns["psbb_cb_lower"];
+                this.columnpsbb_cb_upper = base.Columns["psbb_cb_upper"];
+                this.columnpsbb_percentile_rank = base.Columns["psbb_percentile_rank"];
+                this.columntotal_score = base.Columns["total_score"];
+                this.columntotal_cb_lower = base.Columns["total_cb_lower"];
+                this.columntotal_cb_upper = base.Columns["total_cb_upper"];
+                this.columntotal_percentile_rank = base.Columns["total_percentile_rank"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -500,18 +936,84 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             private void InitClass() {
                 this.columnLECOM = new global::System.Data.DataColumn("LECOM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLECOM);
-                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmail);
+                this.columnlegal_state_cd = new global::System.Data.DataColumn("legal_state_cd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlegal_state_cd);
                 this.columnaamc_id = new global::System.Data.DataColumn("aamc_id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnaamc_id);
+                this.columntest_date = new global::System.Data.DataColumn("test_date", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntest_date);
                 this.columnlname = new global::System.Data.DataColumn("lname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlname);
                 this.columnfname = new global::System.Data.DataColumn("fname", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfname);
+                this.columnmname = new global::System.Data.DataColumn("mname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmname);
+                this.columnsuffix = new global::System.Data.DataColumn("suffix", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsuffix);
+                this.columnaddress = new global::System.Data.DataColumn("address", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress);
                 this.columncity = new global::System.Data.DataColumn("city", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncity);
                 this.columnstate_cd = new global::System.Data.DataColumn("state_cd", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstate_cd);
+                this.columnpostal_cd = new global::System.Data.DataColumn("postal_cd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpostal_cd);
+                this.columncountry = new global::System.Data.DataColumn("country", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncountry);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
+                this.columnsex = new global::System.Data.DataColumn("sex", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsex);
+                this.columnage_at_test = new global::System.Data.DataColumn("age_at_test", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnage_at_test);
+                this.columnmajor_cd = new global::System.Data.DataColumn("major_cd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmajor_cd);
+                this.columnmajor = new global::System.Data.DataColumn("major", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmajor);
+                this.columnprimary_interest_cd = new global::System.Data.DataColumn("primary_interest_cd", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprimary_interest_cd);
+                this.columnprimary_interest = new global::System.Data.DataColumn("primary_interest", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprimary_interest);
+                this.columncpbs_score = new global::System.Data.DataColumn("cpbs_score", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpbs_score);
+                this.columncpbs_cb_lower = new global::System.Data.DataColumn("cpbs_cb_lower", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpbs_cb_lower);
+                this.columncpbs_cb_upper = new global::System.Data.DataColumn("cpbs_cb_upper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpbs_cb_upper);
+                this.columncpbs_percentile_rank = new global::System.Data.DataColumn("cpbs_percentile_rank", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncpbs_percentile_rank);
+                this.columncars_score = new global::System.Data.DataColumn("cars_score", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncars_score);
+                this.columncars_cb_lower = new global::System.Data.DataColumn("cars_cb_lower", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncars_cb_lower);
+                this.columncars_cb_upper = new global::System.Data.DataColumn("cars_cb_upper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncars_cb_upper);
+                this.columncars_percentile_rank = new global::System.Data.DataColumn("cars_percentile_rank", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncars_percentile_rank);
+                this.columnbbfl_score = new global::System.Data.DataColumn("bbfl_score", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbbfl_score);
+                this.columnbbfl_cb_lower = new global::System.Data.DataColumn("bbfl_cb_lower", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbbfl_cb_lower);
+                this.columnbbfl_cb_upper = new global::System.Data.DataColumn("bbfl_cb_upper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbbfl_cb_upper);
+                this.columnbbfl_percentile_rank = new global::System.Data.DataColumn("bbfl_percentile_rank", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbbfl_percentile_rank);
+                this.columnpsbb_score = new global::System.Data.DataColumn("psbb_score", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpsbb_score);
+                this.columnpsbb_cb_lower = new global::System.Data.DataColumn("psbb_cb_lower", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpsbb_cb_lower);
+                this.columnpsbb_cb_upper = new global::System.Data.DataColumn("psbb_cb_upper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpsbb_cb_upper);
+                this.columnpsbb_percentile_rank = new global::System.Data.DataColumn("psbb_percentile_rank", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpsbb_percentile_rank);
+                this.columntotal_score = new global::System.Data.DataColumn("total_score", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_score);
+                this.columntotal_cb_lower = new global::System.Data.DataColumn("total_cb_lower", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_cb_lower);
+                this.columntotal_cb_upper = new global::System.Data.DataColumn("total_cb_upper", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_cb_upper);
+                this.columntotal_percentile_rank = new global::System.Data.DataColumn("total_percentile_rank", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal_percentile_rank);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -647,15 +1149,25 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             private global::System.Data.DataColumn columnLECOM;
             
+            private global::System.Data.DataColumn columnLastName;
+            
+            private global::System.Data.DataColumn columnFirstName;
+            
+            private global::System.Data.DataColumn columnMI;
+            
             private global::System.Data.DataColumn columnEmail;
             
-            private global::System.Data.DataColumn columnlname;
+            private global::System.Data.DataColumn columnAddress1;
             
-            private global::System.Data.DataColumn columnfname;
+            private global::System.Data.DataColumn columnAddress2;
             
-            private global::System.Data.DataColumn columncity;
+            private global::System.Data.DataColumn columnCity;
             
-            private global::System.Data.DataColumn columnstate_cd;
+            private global::System.Data.DataColumn columnState;
+            
+            private global::System.Data.DataColumn columnZip;
+            
+            private global::System.Data.DataColumn columnCountry;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -700,6 +1212,30 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LastNameColumn {
+                get {
+                    return this.columnLastName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FirstNameColumn {
+                get {
+                    return this.columnFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MIColumn {
+                get {
+                    return this.columnMI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn EmailColumn {
                 get {
                     return this.columnEmail;
@@ -708,33 +1244,49 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn lnameColumn {
+            public global::System.Data.DataColumn Address1Column {
                 get {
-                    return this.columnlname;
+                    return this.columnAddress1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fnameColumn {
+            public global::System.Data.DataColumn Address2Column {
                 get {
-                    return this.columnfname;
+                    return this.columnAddress2;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cityColumn {
+            public global::System.Data.DataColumn CityColumn {
                 get {
-                    return this.columncity;
+                    return this.columnCity;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn state_cdColumn {
+            public global::System.Data.DataColumn StateColumn {
                 get {
-                    return this.columnstate_cd;
+                    return this.columnState;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ZipColumn {
+                get {
+                    return this.columnZip;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CountryColumn {
+                get {
+                    return this.columnCountry;
                 }
             }
             
@@ -775,15 +1327,20 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PcatRow AddPcatRow(string LECOM, string Email, string lname, string fname, string city, string state_cd) {
+            public PcatRow AddPcatRow(string LECOM, string LastName, string FirstName, string MI, string Email, string Address1, string Address2, string City, string State, string Zip, string Country) {
                 PcatRow rowPcatRow = ((PcatRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         LECOM,
+                        LastName,
+                        FirstName,
+                        MI,
                         Email,
-                        lname,
-                        fname,
-                        city,
-                        state_cd};
+                        Address1,
+                        Address2,
+                        City,
+                        State,
+                        Zip,
+                        Country};
                 rowPcatRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPcatRow);
                 return rowPcatRow;
@@ -807,11 +1364,16 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnLECOM = base.Columns["LECOM"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnFirstName = base.Columns["FirstName"];
+                this.columnMI = base.Columns["MI"];
                 this.columnEmail = base.Columns["Email"];
-                this.columnlname = base.Columns["lname"];
-                this.columnfname = base.Columns["fname"];
-                this.columncity = base.Columns["city"];
-                this.columnstate_cd = base.Columns["state_cd"];
+                this.columnAddress1 = base.Columns["Address1"];
+                this.columnAddress2 = base.Columns["Address2"];
+                this.columnCity = base.Columns["City"];
+                this.columnState = base.Columns["State"];
+                this.columnZip = base.Columns["Zip"];
+                this.columnCountry = base.Columns["Country"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -819,16 +1381,26 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             private void InitClass() {
                 this.columnLECOM = new global::System.Data.DataColumn("LECOM", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLECOM);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFirstName);
+                this.columnMI = new global::System.Data.DataColumn("MI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMI);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
-                this.columnlname = new global::System.Data.DataColumn("lname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlname);
-                this.columnfname = new global::System.Data.DataColumn("fname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfname);
-                this.columncity = new global::System.Data.DataColumn("city", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncity);
-                this.columnstate_cd = new global::System.Data.DataColumn("state_cd", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnstate_cd);
+                this.columnAddress1 = new global::System.Data.DataColumn("Address1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress1);
+                this.columnAddress2 = new global::System.Data.DataColumn("Address2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAddress2);
+                this.columnCity = new global::System.Data.DataColumn("City", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCity);
+                this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState);
+                this.columnZip = new global::System.Data.DataColumn("Zip", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnZip);
+                this.columnCountry = new global::System.Data.DataColumn("Country", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCountry);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -987,17 +1559,17 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Email {
+            public string legal_state_cd {
                 get {
                     try {
-                        return ((string)(this[this.tableMcat.EmailColumn]));
+                        return ((string)(this[this.tableMcat.legal_state_cdColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Mcat\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'legal_state_cd\' in table \'Mcat\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableMcat.EmailColumn] = value;
+                    this[this.tableMcat.legal_state_cdColumn] = value;
                 }
             }
             
@@ -1005,15 +1577,31 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string aamc_id {
                 get {
-                    if (this.Isaamc_idNull()) {
-                        return null;
-                    }
-                    else {
+                    try {
                         return ((string)(this[this.tableMcat.aamc_idColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'aamc_id\' in table \'Mcat\' is DBNull.", e);
                     }
                 }
                 set {
                     this[this.tableMcat.aamc_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string test_date {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.test_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'test_date\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.test_dateColumn] = value;
                 }
             }
             
@@ -1051,6 +1639,54 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string mname {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.mnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'mname\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.mnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string suffix {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.suffixColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'suffix\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.suffixColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string address {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.addressColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'address\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.addressColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string city {
                 get {
                     try {
@@ -1083,6 +1719,470 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string postal_cd {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.postal_cdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'postal_cd\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.postal_cdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string country {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.countryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'country\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.countryColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Email {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.EmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Email\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.EmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string sex {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.sexColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sex\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.sexColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string age_at_test {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.age_at_testColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'age_at_test\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.age_at_testColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string major_cd {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.major_cdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'major_cd\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.major_cdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string major {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.majorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'major\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.majorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string primary_interest_cd {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.primary_interest_cdColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'primary_interest_cd\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.primary_interest_cdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string primary_interest {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.primary_interestColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'primary_interest\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.primary_interestColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpbs_score {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cpbs_scoreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cpbs_score\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cpbs_scoreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpbs_cb_lower {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cpbs_cb_lowerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cpbs_cb_lower\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cpbs_cb_lowerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpbs_cb_upper {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cpbs_cb_upperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cpbs_cb_upper\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cpbs_cb_upperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cpbs_percentile_rank {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cpbs_percentile_rankColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cpbs_percentile_rank\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cpbs_percentile_rankColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cars_score {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cars_scoreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cars_score\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cars_scoreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cars_cb_lower {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cars_cb_lowerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cars_cb_lower\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cars_cb_lowerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cars_cb_upper {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cars_cb_upperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cars_cb_upper\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cars_cb_upperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cars_percentile_rank {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.cars_percentile_rankColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'cars_percentile_rank\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.cars_percentile_rankColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string bbfl_score {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.bbfl_scoreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bbfl_score\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.bbfl_scoreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string bbfl_cb_lower {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.bbfl_cb_lowerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bbfl_cb_lower\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.bbfl_cb_lowerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string bbfl_cb_upper {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.bbfl_cb_upperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bbfl_cb_upper\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.bbfl_cb_upperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string bbfl_percentile_rank {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.bbfl_percentile_rankColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'bbfl_percentile_rank\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.bbfl_percentile_rankColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string psbb_score {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.psbb_scoreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'psbb_score\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.psbb_scoreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string psbb_cb_lower {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.psbb_cb_lowerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'psbb_cb_lower\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.psbb_cb_lowerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string psbb_cb_upper {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.psbb_cb_upperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'psbb_cb_upper\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.psbb_cb_upperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string psbb_percentile_rank {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.psbb_percentile_rankColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'psbb_percentile_rank\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.psbb_percentile_rankColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string total_score {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.total_scoreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_score\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.total_scoreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string total_cb_lower {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.total_cb_lowerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_cb_lower\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.total_cb_lowerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string total_cb_upper {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.total_cb_upperColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_cb_upper\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.total_cb_upperColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string total_percentile_rank {
+                get {
+                    try {
+                        return ((string)(this[this.tableMcat.total_percentile_rankColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'total_percentile_rank\' in table \'Mcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMcat.total_percentile_rankColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsLECOMNull() {
                 return this.IsNull(this.tableMcat.LECOMColumn);
             }
@@ -1095,14 +2195,14 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEmailNull() {
-                return this.IsNull(this.tableMcat.EmailColumn);
+            public bool Islegal_state_cdNull() {
+                return this.IsNull(this.tableMcat.legal_state_cdColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEmailNull() {
-                this[this.tableMcat.EmailColumn] = global::System.Convert.DBNull;
+            public void Setlegal_state_cdNull() {
+                this[this.tableMcat.legal_state_cdColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1115,6 +2215,18 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setaamc_idNull() {
                 this[this.tableMcat.aamc_idColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istest_dateNull() {
+                return this.IsNull(this.tableMcat.test_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settest_dateNull() {
+                this[this.tableMcat.test_dateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1143,6 +2255,42 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmnameNull() {
+                return this.IsNull(this.tableMcat.mnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmnameNull() {
+                this[this.tableMcat.mnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssuffixNull() {
+                return this.IsNull(this.tableMcat.suffixColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsuffixNull() {
+                this[this.tableMcat.suffixColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsaddressNull() {
+                return this.IsNull(this.tableMcat.addressColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetaddressNull() {
+                this[this.tableMcat.addressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscityNull() {
                 return this.IsNull(this.tableMcat.cityColumn);
             }
@@ -1163,6 +2311,354 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setstate_cdNull() {
                 this[this.tableMcat.state_cdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispostal_cdNull() {
+                return this.IsNull(this.tableMcat.postal_cdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpostal_cdNull() {
+                this[this.tableMcat.postal_cdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscountryNull() {
+                return this.IsNull(this.tableMcat.countryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcountryNull() {
+                this[this.tableMcat.countryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableMcat.EmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEmailNull() {
+                this[this.tableMcat.EmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssexNull() {
+                return this.IsNull(this.tableMcat.sexColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsexNull() {
+                this[this.tableMcat.sexColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isage_at_testNull() {
+                return this.IsNull(this.tableMcat.age_at_testColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setage_at_testNull() {
+                this[this.tableMcat.age_at_testColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ismajor_cdNull() {
+                return this.IsNull(this.tableMcat.major_cdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setmajor_cdNull() {
+                this[this.tableMcat.major_cdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmajorNull() {
+                return this.IsNull(this.tableMcat.majorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmajorNull() {
+                this[this.tableMcat.majorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isprimary_interest_cdNull() {
+                return this.IsNull(this.tableMcat.primary_interest_cdColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setprimary_interest_cdNull() {
+                this[this.tableMcat.primary_interest_cdColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isprimary_interestNull() {
+                return this.IsNull(this.tableMcat.primary_interestColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setprimary_interestNull() {
+                this[this.tableMcat.primary_interestColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscpbs_scoreNull() {
+                return this.IsNull(this.tableMcat.cpbs_scoreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcpbs_scoreNull() {
+                this[this.tableMcat.cpbs_scoreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscpbs_cb_lowerNull() {
+                return this.IsNull(this.tableMcat.cpbs_cb_lowerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcpbs_cb_lowerNull() {
+                this[this.tableMcat.cpbs_cb_lowerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscpbs_cb_upperNull() {
+                return this.IsNull(this.tableMcat.cpbs_cb_upperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcpbs_cb_upperNull() {
+                this[this.tableMcat.cpbs_cb_upperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscpbs_percentile_rankNull() {
+                return this.IsNull(this.tableMcat.cpbs_percentile_rankColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcpbs_percentile_rankNull() {
+                this[this.tableMcat.cpbs_percentile_rankColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscars_scoreNull() {
+                return this.IsNull(this.tableMcat.cars_scoreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcars_scoreNull() {
+                this[this.tableMcat.cars_scoreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscars_cb_lowerNull() {
+                return this.IsNull(this.tableMcat.cars_cb_lowerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcars_cb_lowerNull() {
+                this[this.tableMcat.cars_cb_lowerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscars_cb_upperNull() {
+                return this.IsNull(this.tableMcat.cars_cb_upperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcars_cb_upperNull() {
+                this[this.tableMcat.cars_cb_upperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Iscars_percentile_rankNull() {
+                return this.IsNull(this.tableMcat.cars_percentile_rankColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setcars_percentile_rankNull() {
+                this[this.tableMcat.cars_percentile_rankColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isbbfl_scoreNull() {
+                return this.IsNull(this.tableMcat.bbfl_scoreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setbbfl_scoreNull() {
+                this[this.tableMcat.bbfl_scoreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isbbfl_cb_lowerNull() {
+                return this.IsNull(this.tableMcat.bbfl_cb_lowerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setbbfl_cb_lowerNull() {
+                this[this.tableMcat.bbfl_cb_lowerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isbbfl_cb_upperNull() {
+                return this.IsNull(this.tableMcat.bbfl_cb_upperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setbbfl_cb_upperNull() {
+                this[this.tableMcat.bbfl_cb_upperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isbbfl_percentile_rankNull() {
+                return this.IsNull(this.tableMcat.bbfl_percentile_rankColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setbbfl_percentile_rankNull() {
+                this[this.tableMcat.bbfl_percentile_rankColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispsbb_scoreNull() {
+                return this.IsNull(this.tableMcat.psbb_scoreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpsbb_scoreNull() {
+                this[this.tableMcat.psbb_scoreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispsbb_cb_lowerNull() {
+                return this.IsNull(this.tableMcat.psbb_cb_lowerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpsbb_cb_lowerNull() {
+                this[this.tableMcat.psbb_cb_lowerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispsbb_cb_upperNull() {
+                return this.IsNull(this.tableMcat.psbb_cb_upperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpsbb_cb_upperNull() {
+                this[this.tableMcat.psbb_cb_upperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Ispsbb_percentile_rankNull() {
+                return this.IsNull(this.tableMcat.psbb_percentile_rankColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setpsbb_percentile_rankNull() {
+                this[this.tableMcat.psbb_percentile_rankColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istotal_scoreNull() {
+                return this.IsNull(this.tableMcat.total_scoreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settotal_scoreNull() {
+                this[this.tableMcat.total_scoreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istotal_cb_lowerNull() {
+                return this.IsNull(this.tableMcat.total_cb_lowerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settotal_cb_lowerNull() {
+                this[this.tableMcat.total_cb_lowerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istotal_cb_upperNull() {
+                return this.IsNull(this.tableMcat.total_cb_upperColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settotal_cb_upperNull() {
+                this[this.tableMcat.total_cb_upperColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Istotal_percentile_rankNull() {
+                return this.IsNull(this.tableMcat.total_percentile_rankColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Settotal_percentile_rankNull() {
+                this[this.tableMcat.total_percentile_rankColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1198,6 +2694,54 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LastName {
+                get {
+                    try {
+                        return ((string)(this[this.tablePcat.LastNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'Pcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePcat.LastNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tablePcat.FirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'Pcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePcat.FirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MI {
+                get {
+                    try {
+                        return ((string)(this[this.tablePcat.MIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MI\' in table \'Pcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePcat.MIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Email {
                 get {
                     try {
@@ -1214,65 +2758,97 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string lname {
+            public string Address1 {
                 get {
                     try {
-                        return ((string)(this[this.tablePcat.lnameColumn]));
+                        return ((string)(this[this.tablePcat.Address1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lname\' in table \'Pcat\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address1\' in table \'Pcat\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePcat.lnameColumn] = value;
+                    this[this.tablePcat.Address1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string fname {
+            public string Address2 {
                 get {
                     try {
-                        return ((string)(this[this.tablePcat.fnameColumn]));
+                        return ((string)(this[this.tablePcat.Address2Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fname\' in table \'Pcat\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Address2\' in table \'Pcat\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePcat.fnameColumn] = value;
+                    this[this.tablePcat.Address2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string city {
+            public string City {
                 get {
                     try {
-                        return ((string)(this[this.tablePcat.cityColumn]));
+                        return ((string)(this[this.tablePcat.CityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'city\' in table \'Pcat\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'City\' in table \'Pcat\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePcat.cityColumn] = value;
+                    this[this.tablePcat.CityColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string state_cd {
+            public string State {
                 get {
                     try {
-                        return ((string)(this[this.tablePcat.state_cdColumn]));
+                        return ((string)(this[this.tablePcat.StateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'state_cd\' in table \'Pcat\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'Pcat\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePcat.state_cdColumn] = value;
+                    this[this.tablePcat.StateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Zip {
+                get {
+                    try {
+                        return ((string)(this[this.tablePcat.ZipColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Zip\' in table \'Pcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePcat.ZipColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Country {
+                get {
+                    try {
+                        return ((string)(this[this.tablePcat.CountryColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Country\' in table \'Pcat\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePcat.CountryColumn] = value;
                 }
             }
             
@@ -1290,6 +2866,42 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLastNameNull() {
+                return this.IsNull(this.tablePcat.LastNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLastNameNull() {
+                this[this.tablePcat.LastNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFirstNameNull() {
+                return this.IsNull(this.tablePcat.FirstNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFirstNameNull() {
+                this[this.tablePcat.FirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMINull() {
+                return this.IsNull(this.tablePcat.MIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMINull() {
+                this[this.tablePcat.MIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsEmailNull() {
                 return this.IsNull(this.tablePcat.EmailColumn);
             }
@@ -1302,50 +2914,74 @@ namespace MCAT_PCAT_FindApplicants.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IslnameNull() {
-                return this.IsNull(this.tablePcat.lnameColumn);
+            public bool IsAddress1Null() {
+                return this.IsNull(this.tablePcat.Address1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetlnameNull() {
-                this[this.tablePcat.lnameColumn] = global::System.Convert.DBNull;
+            public void SetAddress1Null() {
+                this[this.tablePcat.Address1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfnameNull() {
-                return this.IsNull(this.tablePcat.fnameColumn);
+            public bool IsAddress2Null() {
+                return this.IsNull(this.tablePcat.Address2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfnameNull() {
-                this[this.tablePcat.fnameColumn] = global::System.Convert.DBNull;
+            public void SetAddress2Null() {
+                this[this.tablePcat.Address2Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscityNull() {
-                return this.IsNull(this.tablePcat.cityColumn);
+            public bool IsCityNull() {
+                return this.IsNull(this.tablePcat.CityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcityNull() {
-                this[this.tablePcat.cityColumn] = global::System.Convert.DBNull;
+            public void SetCityNull() {
+                this[this.tablePcat.CityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isstate_cdNull() {
-                return this.IsNull(this.tablePcat.state_cdColumn);
+            public bool IsStateNull() {
+                return this.IsNull(this.tablePcat.StateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setstate_cdNull() {
-                this[this.tablePcat.state_cdColumn] = global::System.Convert.DBNull;
+            public void SetStateNull() {
+                this[this.tablePcat.StateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsZipNull() {
+                return this.IsNull(this.tablePcat.ZipColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetZipNull() {
+                this[this.tablePcat.ZipColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCountryNull() {
+                return this.IsNull(this.tablePcat.CountryColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCountryNull() {
+                this[this.tablePcat.CountryColumn] = global::System.Convert.DBNull;
             }
         }
         

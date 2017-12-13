@@ -28,6 +28,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -65,7 +66,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>\\learnrc\Software Installs\Brians APPS\Libraries\LECOM - Solid\bin\Release\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
-    <Reference Include="LECOMSolid">
+    <Reference Include="LECOMSolid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>\\learnrc\Software Installs\Brians APPS\Libraries\LECOM - Solid\bin\Release\LECOMSolid.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -117,12 +118,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmailForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmailForm.Designer.cs">
-      <DependentUpon>EmailForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,9 +148,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="EmailForm.resx">
-      <DependentUpon>EmailForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,9 +164,10 @@
     <EmbeddedResource Include="Reports\ClinEdReport.resx">
       <DependentUpon>ClinEdReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Report1.rdlc">
+    <EmbeddedResource Include="Reports\mcatReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PcatReport.rdlc" />
     <None Include="ClassDiagram1.cd" />
     <None Include="MCAT_PCAT_FindApplicants_TemporaryKey.pfx" />
     <None Include="packages.config" />

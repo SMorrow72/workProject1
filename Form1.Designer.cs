@@ -36,7 +36,6 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.mcatBrowseButton = new System.Windows.Forms.Button();
             this.mcatReportViewButton = new System.Windows.Forms.Button();
-            this.emailButton = new System.Windows.Forms.Button();
             this.pcatBrowseButton = new System.Windows.Forms.Button();
             this.pcatReportViewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -107,18 +106,6 @@
             this.mcatReportViewButton.Visible = false;
             this.mcatReportViewButton.Click += new System.EventHandler(this.mcatReportViewButton_Click);
             // 
-            // emailButton
-            // 
-            this.emailButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailButton.Location = new System.Drawing.Point(90, 188);
-            this.emailButton.Name = "emailButton";
-            this.emailButton.Size = new System.Drawing.Size(109, 33);
-            this.emailButton.TabIndex = 10;
-            this.emailButton.Text = "Email";
-            this.emailButton.UseVisualStyleBackColor = true;
-            this.emailButton.Visible = false;
-            this.emailButton.Click += new System.EventHandler(this.emailButton_Click);
-            // 
             // pcatBrowseButton
             // 
             this.pcatBrowseButton.Location = new System.Drawing.Point(82, 194);
@@ -150,7 +137,6 @@
             this.ClientSize = new System.Drawing.Size(295, 255);
             this.Controls.Add(this.pcatReportViewButton);
             this.Controls.Add(this.pcatBrowseButton);
-            this.Controls.Add(this.emailButton);
             this.Controls.Add(this.mcatReportViewButton);
             this.Controls.Add(this.mcatBrowseButton);
             this.Controls.Add(this.maskedTextBox1);
@@ -174,7 +160,6 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button mcatBrowseButton;
         private System.Windows.Forms.Button mcatReportViewButton;
-        private System.Windows.Forms.Button emailButton;
         private System.Windows.Forms.Button pcatBrowseButton;
         private System.Windows.Forms.Button pcatReportViewButton;
     }

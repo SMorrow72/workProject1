@@ -25,7 +25,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
 
         public override void AddControls()
         {
-            reportViewer.LocalReport.ReportPath = @"..\..\Reports\Report1.rdlc"; 
+            reportViewer.LocalReport.ReportPath = @"..\..\Reports\mcatReport.rdlc"; 
         }
 
         private void ReportForm1_Load(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
         public override void GetData()
         {
             mcatDataTable.Fill(conn);
-            reportDataSource.Name = "DataSet1";
+            reportDataSource.Name = "DataSet2";
             reportViewer.RefreshReport();
         }
 
@@ -54,7 +54,7 @@ namespace MCAT_PCAT_FindApplicants.Reports
 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(938, 515);
-            this.Name = "ReportForm1";
+            this.Name = "mcatReportForm";
             this.ResumeLayout(false);
         }
     }
